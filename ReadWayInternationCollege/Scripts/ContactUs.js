@@ -32,7 +32,7 @@
 });
 var onAjaxRequestSuccess = function (result) {
     var status = result.status;
-    if (status == 0) {
+    if (status === 0) {
         toastr.success(result.message, result.subject);
         $('#Name').val('');
         $('#PhoneNumber').val('');
@@ -43,7 +43,7 @@ var onAjaxRequestSuccess = function (result) {
         $('#message').show();
     }
 
-    else if (status == 1) {
+    else if (status === 1) {
         toastr.error(result.message, result.subject);
         $('#secondaryLoader').hide();
         $('#message').show();
